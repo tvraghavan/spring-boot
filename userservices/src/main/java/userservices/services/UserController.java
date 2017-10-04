@@ -15,7 +15,14 @@ public class UserController {
         User user = new User();
         user.setUserId(userId);
         user.setisActive("Y");
-        
+        if(userId !=null && userId.equalsIgnoreCase("admin")) {
+        	try {
+				Thread.sleep(10000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
         return user;
     }
 }
